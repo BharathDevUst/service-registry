@@ -26,7 +26,7 @@ pipeline {
 			    bat "docker rm -f service-register"
 			    bat "docker rmi -f service-image"
 			    bat "docker build -t service-image ."
-                bat "docker run -p 8090:8090 -d --name service-register service-image"
+                bat "docker run -p 8761:8761 -d --name service-register service-image"
             }
 		}
 	}
